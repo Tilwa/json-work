@@ -16,11 +16,9 @@ class NewPost extends Component {
       body: this.state.content,
       author: this.state.author,
     };
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts", data)
-      .then((response) => {
-        console.log(response);
-      });
+    axios.get("/posts", data).then((response) => {
+      console.log(response);
+    });
   };
 
   render() {
